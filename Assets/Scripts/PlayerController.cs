@@ -1,11 +1,14 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
 public class PlayerController : MonoBehaviour
 {
+    public Text scoreText ;
     public float speed = 1000f;
     public Rigidbody rb;
     private int score = 0;
@@ -18,7 +21,8 @@ public class PlayerController : MonoBehaviour
         if(other.tag == "Pickup")
         {
             score++;
-            Debug.Log($"Score: {score}");
+            SetScoreText();
+            //Debug.Log($"Score: {score}");
             Destroy(other.gameObject);
         }
         
@@ -33,7 +37,9 @@ public class PlayerController : MonoBehaviour
             Debug.Log("You win!");
         }
     }
-    
+    void SetScoreText(){
+        scoreText.text = $"Score: {this.score}";
+    }
     
     // Update is called once per frame
     void FixedUpdate()
