@@ -3221,6 +3221,8 @@ MonoBehaviour:
   speed: 1000
   rb: {fileID: 756182003}
   health: 5
+  winLoseBG: {fileID: 305207528}
+  winLoseText: {fileID: 123622573}
 --- !u!1001 &757531745
 PrefabInstance:
   m_ObjectHideFlags: 0
