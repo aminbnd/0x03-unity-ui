@@ -3060,6 +3060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1fc1c05c64abf40a627a52e2323c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthText: {fileID: 1681048361}
   scoreText: {fileID: 1461453589}
   speed: 1000
   rb: {fileID: 756182003}

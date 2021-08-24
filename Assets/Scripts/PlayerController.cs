@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public Text healthText;
     public Text scoreText ;
     public float speed = 1000f;
     public Rigidbody rb;
@@ -29,7 +30,8 @@ public class PlayerController : MonoBehaviour
         if(other.tag == "Trap")
         {
             health--;
-            Debug.Log($"Health: {health}");
+            // Debug.Log($"Health: {health}");
+            SetHealthText();
         }
 
         if(other.tag == "Goal")
@@ -39,6 +41,11 @@ public class PlayerController : MonoBehaviour
     }
     void SetScoreText(){
         scoreText.text = $"Score: {this.score}";
+    }
+
+    void SetHealthText()
+    {
+        healthText.text = $"Health: {health}"; //If it does'nt work, I should add the key word "this"
     }
     
     // Update is called once per frame
