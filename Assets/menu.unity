@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Options
 --- !u!222 &459360938
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -459,7 +459,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Quit
 --- !u!222 &798081603
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -671,7 +671,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Play
 --- !u!222 &1145125770
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1204,6 +1204,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6fed031a69b7943bd885bf5c1f2b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trapMat: {fileID: 0}
-  goalMat: {fileID: 0}
-  colorblindMode: {fileID: 0}
