@@ -23,20 +23,17 @@ public class PlayerController : MonoBehaviour
         {
             score++;
             SetScoreText();
-            //Debug.Log($"Score: {score}");
             Destroy(other.gameObject);
         }
         
         if(other.tag == "Trap")
         {
             health--;
-            // Debug.Log($"Health: {health}");
             SetHealthText();
         }
 
         if(other.tag == "Goal")
         {
-            // Debug.Log("You win!");
             congratsTextField();
             StartCoroutine(LoadScene(3));
         }
@@ -105,11 +102,15 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetButton("Cancel"))
+        {
+            SceneManager.LoadScene("menu");
+        }
+        
+        // Lose
         if(health == 0)
         {
             appologyMessageTextField();
-            // Debug.Log("Game Over!");
-            // SceneManager.LoadScene(0, LoadSceneMode.Single);
             StartCoroutine(LoadScene(3));
         }
     }
