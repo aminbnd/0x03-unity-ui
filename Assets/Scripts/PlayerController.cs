@@ -68,6 +68,15 @@ public class PlayerController : MonoBehaviour
         winLoseBG.gameObject.SetActive(true);
     }
     
+
+    // Wait for seconds !!!
+    IEnumerator LoadScene(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("Maze");
+        score = 0;
+        health = 5;
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -99,7 +108,8 @@ public class PlayerController : MonoBehaviour
         {
             appologyMessageTextField();
             // Debug.Log("Game Over!");
-            SceneManager.LoadScene(0, LoadSceneMode.Single);
+            // SceneManager.LoadScene(0, LoadSceneMode.Single);
+            StartCoroutine(LoadScene(3));
         }
     }
 }
