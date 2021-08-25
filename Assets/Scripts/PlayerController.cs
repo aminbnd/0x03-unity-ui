@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
         {
             // Debug.Log("You win!");
             congratsTextField();
+            StartCoroutine(LoadScene(3));
         }
     }
     void SetScoreText(){
